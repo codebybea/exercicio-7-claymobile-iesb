@@ -65,7 +65,7 @@ export default function App() {
     <PaperProvider>
       <View style={styles.container}>
         <StatusBar style="auto" />
-        <Text variant='displaySmall'>Lista de Estados</Text>
+        <Text variant='displaySmall'>Lista de Jogadores</Text>
         <FlatList
           data={times}
           renderItem={({ item }) => <Time {...item} />}
