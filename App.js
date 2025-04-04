@@ -1,8 +1,9 @@
 // App.js
 import React from 'react';
-import { Provider as PaperProvider } from 'react-native-paper';
+import { Provider as PaperProvider, Text } from 'react-native-paper';
 import { View, FlatList, StyleSheet } from 'react-native';
 import Time from './componentes/Time';
+import { StatusBar } from 'expo-status-bar';
 
 const times = [
   {
@@ -63,6 +64,8 @@ export default function App() {
   return (
     <PaperProvider>
       <View style={styles.container}>
+        <StatusBar style="auto" />
+        <Text variant='displaySmall'>Lista de Estados</Text>
         <FlatList
           data={times}
           renderItem={({ item }) => <Time {...item} />}
@@ -77,7 +80,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingTop: 20
   },
 });
